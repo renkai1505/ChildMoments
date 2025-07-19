@@ -311,10 +311,10 @@ import { md } from "~/utils";
 import dayjs from "dayjs";
 
 function getAgeString(birthday: string | undefined, date: string): string {
-  if (!birthday) return '';
+  if (!birthday) return '未设置生日';
   const birth = dayjs(birthday);
   const target = dayjs(date);
-  if (!birth.isValid() || !target.isValid()) return '';
+  if (!birth.isValid() || !target.isValid()) return '未设置生日';
   let years = target.diff(birth, 'year');
   let months = target.diff(birth.add(years, 'year'), 'month');
   let days = target.diff(birth.add(years, 'year').add(months, 'month'), 'day');

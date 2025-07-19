@@ -108,7 +108,7 @@ const uploadCoverUrl = async (files: FileList) => {
 }
 
 onMounted(async () => {
-  Object.assign(state,currentUser.value)
+  await reload()
 })
 
 </script>
